@@ -1,0 +1,67 @@
+<wap-provisioningdoc>
+<characteristic type="Install">
+<parm name="InstallPhase" value="install" />
+<parm name="SetupDLL" value="1" />
+<parm name="OSVersionMin" value="3.0" />
+<parm name="OSVersionMax" value="5.99" />
+<parm name="BuildNumberMin" value="0" />
+<parm name="BuildNumberMax" value="-536870912" />
+<parm name="AppName" value="Lionel Spohr TimePanic" />
+<parm name="InstallDir" value="%CE1%\TimePanic" translation="install" />
+<parm name="NumDirs" value="3" />
+<parm name="NumFiles" value="6" />
+<parm name="NumRegKeys" value="1" />
+<parm name="NumRegVals" value="1" />
+<parm name="NumShortcuts" value="1" />
+</characteristic>
+<characteristic type="FileOperation">
+<characteristic type="%InstallDir%" translation="install">
+<characteristic type="MakeDir" />
+<characteristic type="TipDev.exe" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="00TipDev.001" />
+</characteristic>
+</characteristic>
+<characteristic type="TipDevNew.dll" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="TIPDEV~2.002" />
+</characteristic>
+</characteristic>
+<characteristic type="TipDevSetup.dll" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="TIPDEV~3.003" />
+<parm name="NoDateCheck" />
+<parm name="WarnIfSkip" />
+</characteristic>
+</characteristic>
+<characteristic type="TipDevLog.dll" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="TIPDEV~1.004" />
+</characteristic>
+</characteristic>
+<characteristic type="TipDevSync.dll" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="TIPDEV~4.005" />
+</characteristic>
+</characteristic>
+<characteristic type="Tip90x90.png" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="Tip90x90.006" />
+</characteristic>
+</characteristic>
+</characteristic>
+<characteristic type="%CE11%" translation="install">
+<characteristic type="MakeDir" />
+<characteristic type="TimePanic.lnk" translation="install">
+<characteristic type="Shortcut">
+<parm name="Source" value="%InstallDir%\TipDev.exe" translation="install" />
+</characteristic>
+</characteristic>
+</characteristic>
+</characteristic>
+<characteristic type="Registry">
+<characteristic type="HKLM\SOFTWARE\Timepanic">
+<parm name="ProgramFilesDir" value="%CE1%" datatype="string" translation="install" />
+</characteristic>
+</characteristic>
+</wap-provisioningdoc>
